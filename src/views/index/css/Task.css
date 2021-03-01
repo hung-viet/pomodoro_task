@@ -1,0 +1,18 @@
+.pointer {
+    cursor: pointer;
+}
+
+.btn-outline-primary {
+    border-color: #3f80ea !important;
+    color: #3f80ea;
+}
+.btn-outline-primary:hover {
+    background-color: #3f80ea;
+}
+.btn-outline-success {
+    border-color: #4bbf73 !important;
+    color: #4bbf73;
+}
+.btn-outline-success:hover {
+    background-color: #4bbf73;
+}
