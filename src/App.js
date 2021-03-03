@@ -2,8 +2,9 @@ import './App.css';
 import Timer from './views/index/js/Timer';
 import Task from './views/index/js/Task';
 import AddButton from './views/index/js/AddButton';
-import PlayMusicButton from './views/index/js/PlayMusicButton';
+// import PlayMusicButton from './views/index/js/PlayMusicButton';
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component {
@@ -107,7 +108,7 @@ class App extends React.Component {
               <h2><i className="fab fa-github"></i></h2>
             </div>
             <Timer timer={this.state.timer} timerState={this.state.timerState} isBreakTime={this.state.isBreakTime} setTimer={this.setTimer} updateBreakStatus={this.updateBreakStatus} />
-            <PlayMusicButton />
+            {/* <PlayMusicButton /> */}
             <AddButton addDoingTask={this.addDoingTask} />
             <div className="rounded">
               <div className="py-2 px-3 text-white rounded-top fw-bold" style={{ backgroundColor: '#3f80ea' }}>You've got {this.state.listTaskDoing.filter(item => !item.isDone).length} tasks today</div>
