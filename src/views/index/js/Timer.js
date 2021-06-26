@@ -61,39 +61,19 @@ class Timer extends React.Component {
     }
     const timerValue = this.renderTimer(this.props.timer);
     return (
-      <div className="py-2">
+      <div>
         <h1 className="text-center" style={{ color }}>{timerValue}</h1>
-        <div className="d-flex">
-          <Modal show={this.state.isModalShown} onHide={this.handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Hey</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>{this.props.isBreakTime ? 'Come back to work!' : 'Take a break!'}</Modal.Body>
-            <Modal.Footer>
-              <Button variant="success" onClick={this.handleClose}>
-                Ok
-              </Button>
-            </Modal.Footer>
-          </Modal>
-
-          {/* <div className="modal fade" id="exampleModalCenter" tabIndex={-1} aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
-                </div>
-                <div className="modal-body">
-                  <p>{this.state.isBreakTime ? 'Come back to work' : 'Take a break'}</p>
-                </div>
-                <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" className="btn btn-primary" onClick={this.props.updateBreakStatus}>Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div> */}
-        </div>
+        <Modal show={this.state.isModalShown} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Hey</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {this.props.isBreakTime ? 'Come back to work!' : 'Take a break!'}
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="success" onClick={this.handleClose}>Ok</Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     )
   }

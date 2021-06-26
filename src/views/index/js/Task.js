@@ -37,10 +37,12 @@ class Task extends React.Component {
       btnPause = <span><i className="fas fa-play"></i> Start</span>
     }
     return (
-      <div className="mb-2 shadow-sm">
-        <div className="d-flex justify-content-between mb-2 px-3 py-4">
+      <div className="mb-2 shadow-sm bg-white">
+        <div className="d-flex mb-2 px-3 py-4">
           <span className="fw-bold">{this.props.task.name}</span>
-          <button type="button" className="btn-close btn-sm" onClick={this.delete}></button>
+          <button type="button" class="btn btn-sm btn-outline-danger ml-auto" onClick={this.delete}>
+            <i class="fas fa-trash-alt"></i>
+          </button>
         </div>
         <div className="d-flex flex-row-reverse bg-light py-2 px-3">
           {this.props.currentTaskId && this.props.currentTaskId !== this.props.task.id && this.props.timerState === "running" ? null : <button type="button" className="btn btn-outline-success btn-sm" onClick={this.updateStartStatus}>{btnPause}</button>}
